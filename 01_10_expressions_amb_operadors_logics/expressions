@@ -1,0 +1,20 @@
+
+
+    la Clara és més jove que tu -----edatClara < mevaEdat
+
+    la Clara i el Marc són més joves que tu ------calra<yo && marc<yo
+
+    la Clara és més jove que tu i tu ets més jove que el Marc----clara<yo && marc>yo
+
+    la Clara no és més jove que el Marc------clara>marc
+
+    no és cert que el Marc sigui més jove que la Clara----- !edadmarc < edadclara
+
+    Ni el Marc és més jove que la Clara ni tu ets més jove que el Marc----- !marc<clara && !yo<marc
+
+    Tu ets més gran que la Clara i el Marc junts o bé la Clara i el Marc tenen la mateixa edat---- Yo > clara && marc || clara ==marc
+    
+    Yo tinc la mateixa edat del marc -----yo ==marc
+    
+    Yo tinc mes edat del marc o igual -----yo >=marc
+
