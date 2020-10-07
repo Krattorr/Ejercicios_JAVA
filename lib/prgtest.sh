@@ -11,7 +11,7 @@ then
     echo
     echo "Error"
     echo "====="
-    echo "El directori actual no correspon al d'un exercici amnb test"
+    echo "El directori actual no correspon al d'un exercici amb test"
     exit
 fi
 
