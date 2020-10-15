@@ -18,9 +18,9 @@ public class MesosAnys {
         else if(mes==1){
         
         	mes=12;
-        	int mesos=mes+2;
+        	int mesos=2;
         	int anteriorany=any-1;
-        	any=any +1;
+        	
         	
         	System.out.println("Anterior "+mes+"/"+anteriorany+" i posterior "+mesos+"/"+any);
         	
