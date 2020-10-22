@@ -1,2 +1,5 @@
-Introdueix una nota
-Cap nota vàlida introduïda
+Introdueix un valor
+Introdueix un valor
+Introdueix un valor
+Introdueix un valor
+El màxim és 24

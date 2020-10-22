@@ -1,2 +1,2 @@
-Introdueix una nota
-Cap nota vàlida introduïda
+Introdueix un valor
+El màxim és 0
