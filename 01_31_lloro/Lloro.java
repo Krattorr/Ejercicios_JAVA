@@ -1,3 +1,6 @@
+/*
+*Lloro que cuando ve un espacio dice adios
+*/
 public class Lloro {
     public static void main(String[] args) {
     	
