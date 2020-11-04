@@ -11,29 +11,31 @@ public class Endevina {
       System.out.println("Nombre?");
         int num1 = Integer.parseInt(Entrada.readLine());
      
-     if(numadivinar>num1){
-     System.out.println("Massa petit");
+     if(num1>=1 && num1<100){
      
-     }
-      if(num1>=57){
-     System.out.println("Fora de rang");
-     }
-      if(num1<57 && num1>42){
-     System.out.println("Massa gran");
+     	if(num1==numadivinar){
+     		System.out.println("Encertat!");
+     		break;
+     	}
+     	else if (num1<42){
+     		System.out.println("Massa petit");
+     		
+     	}
+     	
+     	else if (num1>42){
+     	System.out.println("Massa gran");
+    
      
-     }
-     
-     if(numadivinar==num1){
-     System.out.println("Encertat!");
-     break;
-     }
+    	 }
     
      
      
-     
-     
+    }
+    if(num1<=0 || num1>=101){
+     	System.out.println("Fora de rang");
+    
      }
     
-    
+}
 }
 }
