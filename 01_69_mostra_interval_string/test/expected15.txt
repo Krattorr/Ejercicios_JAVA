@@ -1,4 +1,6 @@
 text?
 inici?
 final?
-ola
+o
+l
+a

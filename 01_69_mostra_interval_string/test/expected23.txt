@@ -1,4 +1,6 @@
 text?
 inici?
 final?
-loh
+l
+o
+h

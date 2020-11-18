@@ -1,4 +1,7 @@
 text?
 inici?
 final?
-hola
+h
+o
+l
+a
