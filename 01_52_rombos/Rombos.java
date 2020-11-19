@@ -1,5 +1,5 @@
 /*
-*Recorrido de numeros con comitas con dos piramides
+*Recorrido de numeros con comitas rombo
 */
 
 
