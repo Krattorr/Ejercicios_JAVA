@@ -1,3 +1,9 @@
+/*
+Indica si es parell o sennar
+*/
+
+
+
 public class ParellSenar {
     public static void main(String[] args) {
        
