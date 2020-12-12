@@ -1,4 +1,6 @@
- 
+/*
+Calcula el mes anterior y posterior 
+*/ 
 public class MesosAnys {
     public static void main(String[] args) {
  
