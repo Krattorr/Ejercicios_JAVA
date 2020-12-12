@@ -1,4 +1,6 @@
-
+/*
+Segun el numero que pongamos nos dira a que dia corresponde
+*/
 public class DiaSetmana {
     public static void main(String[] args) {
         int numero = Integer.parseInt(args[0]);
