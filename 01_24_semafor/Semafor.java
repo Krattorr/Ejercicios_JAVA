@@ -1,6 +1,6 @@
 
 /*
-*CODIGO PARA UN SEMAFOR
+Programa de un semaforo normal y corriente pero nosotros elegimos el color
 */
 
 public class Semafor {
