@@ -1,3 +1,7 @@
+/*
+Calculadora normal no tiene nada especial
+*/
+
 public class CalculadoraSenzilla {
     public static void main(String[] args) {
         System.out.println("Operand1?");
