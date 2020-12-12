@@ -1,3 +1,8 @@
+/*
+Suma las notas asta que pongas una nota incorrecta
+*/
+
+
 public class SumaNotes {
     public static void main(String[] args) {
     
