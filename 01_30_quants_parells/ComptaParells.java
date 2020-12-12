@@ -1,5 +1,5 @@
 /*
-*Contador
+*Pondremos un valores y el programa nos ira contando los numero parejos 
 */
 public class ComptaParells {
     public static void main(String[] args) {
