@@ -1,5 +1,5 @@
 /*
-*El usuario tiene que adivinar el numero secreto que es el 42
+*El programa ira contando segun el salto que abremos puesto asta llegar la numero final deseado.
 */
 public class NaturalsIniciFi {
     public static void main(String[] args) {
