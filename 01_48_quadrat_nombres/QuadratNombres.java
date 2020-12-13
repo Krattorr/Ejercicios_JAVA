@@ -1,5 +1,5 @@
 /*
-*Recorrido de numeros
+*Recorrido de numeros en forma de cuadrado en valor final definira lo grande que sera el cuadrado
 */
 
 
