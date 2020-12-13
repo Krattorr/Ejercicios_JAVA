@@ -1,5 +1,5 @@
 /*
-*Recorrido de numeros
+*Nuestro programa dibujara triangulo de numeros gracias  a los parametros del for
 */
 
 
