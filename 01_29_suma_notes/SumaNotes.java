@@ -1,5 +1,5 @@
 /*
-Suma las notas asta que pongas una nota incorrecta
+ Es un programa suma las notas asta que pongas una nota incorrecta que seria un numero inferior a 0 
 */
 
 
