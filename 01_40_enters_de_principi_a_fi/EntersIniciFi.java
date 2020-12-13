@@ -1,5 +1,5 @@
 /*
-*El usuario tiene que adivinar el numero secreto que es el 42
+*El programa contara del valor inicial al valor final pero en con el salto no tinen que contar uno por uno eso ño eligue  el usurario.
 */
 public class EntersIniciFi {
     public static void main(String[] args) {
@@ -10,11 +10,15 @@ public class EntersIniciFi {
     System.out.println("Valor final?");
         int numfinal = Integer.parseInt(Entrada.readLine());
     
-    System.out.println("Valor final?");
+    System.out.println("Salt?");
         int salt = Integer.parseInt(Entrada.readLine());
         
         
-        while()
+        if(numinicial==numfinal){
+        	    System.out.println(numfinal);
+        }
+        
+        while(numinicial<numfinal){
         
         if(numinicial<numfinal){
         
