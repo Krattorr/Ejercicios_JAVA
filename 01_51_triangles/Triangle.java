@@ -1,5 +1,5 @@
 /*
-*Recorrido de numeros con comitas con dos piramides
+*Recorrido de numeros con puntos el usuario puede elegir cuantas piramides quiere
 */
 
 
@@ -18,7 +18,7 @@ public class Triangle{
 	for (int fila=9;0<=fila;fila--){ 
 	
 		for(int i=1;i<=fila;i++){
-			System.out.print("*");
+			System.out.print(".");
 			
 			
 		}
@@ -40,7 +40,7 @@ public class Triangle{
  			}
  			
  		for(int i=fila;i>0;i--){
-			System.out.print("*");
+			System.out.print(".");
 			
 			
 		}
