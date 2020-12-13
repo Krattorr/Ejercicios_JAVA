@@ -10,15 +10,21 @@ public class NaturalsIniciFi {
     System.out.println("Valor final?");
         int numfinal = Integer.parseInt(Entrada.readLine());
     
-    System.out.println("Valor salt?");
+    System.out.println("Salt?");
         int salt = Integer.parseInt(Entrada.readLine());
         
-        for(int i=salt;numinicial<numfinal;i++){
-        	 
-        	 System.out.println(numinicial);
+        
+        
+        for(int i=salt;numinicial<=numfinal;i++){
+        
+        
+        	System.out.println(numinicial);
         	numinicial=numinicial+i;
+         
         	i--;
-        }
+        	
+        	
+    }    
         
 }
 }
