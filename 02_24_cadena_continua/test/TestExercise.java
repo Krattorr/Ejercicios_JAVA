@@ -29,7 +29,7 @@ public class TestExercise {
     public void esEnter(String text, boolean esperat) {
         boolean obtingut = UtilString.esEnter(text);
         assertEquals(esperat, obtingut, "Revisa el cas en que l'entrada sigui '" +
-                                        text);
+                                        text + "'");
     }
 
     @ParameterizedTest
