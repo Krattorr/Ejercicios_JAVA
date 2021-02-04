@@ -30,8 +30,15 @@ function download_junit() {
         echo "#####################"
         mkdir -p "$JUNITDEST"
         cd "$JUNITDEST"
-        wget -O $JUNITJAR -c https://search.maven.org/remotecontent?filepath=org/junit/platform/junit-platform-console-standalone/1.7.0/junit-platform-console-standalone-1.7.0.jar  
-        cd -
+        wget -O $JUNITJAR -c https://search.maven.org/remotecontent?filepath=org/junit/platform/junit-platform-console-standalone/1.7.0/junit-platform-console-standalone-1.7.0.jar
+        if [ "$?" -ne 0 ];
+        then
+            show_error "S'ha produït un error mentre es descarregava el fitxer."
+            echo "Intenta-ho més tard o parla amb el teu docent si el problema persisteix."
+            echo
+            rm -f $JUNITJAR > /dev/null
+        fi
+        cd - &> /dev/null
     fi
 }
 

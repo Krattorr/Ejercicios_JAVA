@@ -32,6 +32,18 @@ then
 fi
 has_test=1
 
+# Check whether cwd is an actual exercise folder
+if [ ! -d  test ];
+then
+    echo
+    echo "Error"
+    echo "====="
+    echo
+    echo "La carpeta actual no sembla correspondre a un exercici de introprg amb suport de prova automàtica."
+    exit 1
+fi
+
+
 # Check test configuration
 if [ ! -f "$test_folder/programname" ];
 then
