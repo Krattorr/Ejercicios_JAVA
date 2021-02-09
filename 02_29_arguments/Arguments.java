@@ -1,3 +1,6 @@
+
+/* El programa comprobara las posiciones del array y los separaraa en numeros o letras  */
+
 public class Arguments{
 	public static void main(String[] args){
 	       int caracteres=Integer.parseInt(Entrada.readLine());
