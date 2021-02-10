@@ -1,3 +1,6 @@
+
+/* Hara la separacion de las letras y quitara espacios y numeros */
+
 public class UtilString{
 	public static String nomesLletres(String text){
 
