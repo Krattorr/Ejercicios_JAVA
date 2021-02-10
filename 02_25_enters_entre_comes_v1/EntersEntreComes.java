@@ -1,4 +1,5 @@
 	
+/* Recorreremos un array con un for poniendo entre los numeros una coma */
 
 public class EntersEntreComes {
     public static void main(String[] args) {
