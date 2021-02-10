@@ -9,16 +9,16 @@ public class Quadrat {
     }
     public static void dibuixaQuadrat(int costat){
     	
-    	for (int linea=1;linea<costat;linea++){
-    	System.out.println();
+    	for (int linea=1;linea<=costat;linea++){
     	dibuxaLinea(costat);
+    	System.out.println();
     	}
     
     }
     
     public static void dibuxaLinea(int costat){
-    for (int columna=1;columna<costat;columna++){
-    	System.out.print("x");
+    for (int columna=1;columna<=costat;columna++){
+    	System.out.print(" X");
     	
     }
     
