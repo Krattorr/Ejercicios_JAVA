@@ -3,8 +3,7 @@
 
 public class Arguments{
 	public static void main(String[] args){
-	       int caracteres=Integer.parseInt(Entrada.readLine());
-
+	      
 	 	int pos = 0;
 
    		 if(args.length == 0){
