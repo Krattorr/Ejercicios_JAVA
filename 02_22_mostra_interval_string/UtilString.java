@@ -1,3 +1,6 @@
+
+/* Calculara las possiciones que tenga el string */
+
 public class UtilString{
 	public static String intervalString(String palabra, int inici, int acaba){
 	String reco = "";
