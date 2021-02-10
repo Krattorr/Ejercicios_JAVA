@@ -1,3 +1,6 @@
+
+/* Revisara si contien alguna de estas palabras o letras y devolvera true o false */
+
 public class UtilitatsConfirmacio{
 	 public static boolean respostaABoolean(String resposta) {
 		  
