@@ -1,5 +1,5 @@
 
-/* Comprueba si es vocal en la primera posicion y ultima */
+/* Comprueba si es vocal en la primera posicion y ultima  */
 
 public class LloroVocalIniciFi {
     public static void main(String[] args) {
