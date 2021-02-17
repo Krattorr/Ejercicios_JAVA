@@ -28,7 +28,12 @@ test_subfolder=test
 test_folder="$exercise_base/$test_subfolder"
 if [ ! -d "$test_folder" ];
 then
-    continue
+    echo
+    echo "Error"
+    echo "====="
+    echo
+    echo "La carpeta actual no sembla correspondre a un exercici amb correcció automàtica"
+    exit 1
 fi
 has_test=1
 
