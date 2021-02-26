@@ -1,1 +1,1 @@
-ERROR: Cal especificar els fitxers origen, traduccio i destinació"
+ERROR: Cal especificar els fitxers origen, traduccio i destinació
