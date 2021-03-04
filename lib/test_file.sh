@@ -21,6 +21,9 @@
 # - sortida trobada
 # - diferència
 
+# Addicionalment accepta l'execució del script test/pretest abans dels
+# test si aquest existeix
+
 
 # $1 name of the program under test
 # $2 folder with the tests
@@ -29,7 +32,7 @@
 # Check this script parameters
 if [ -z "$1" ] || [ -z "$2" ];
 then
-    echo "Ús: $(basename $0) «programa a ororvar» «carpeta amb els tests»"
+    echo "Ús: $(basename $0) «programa a provar» «carpeta amb els tests»"
     exit 1
 fi
 
@@ -38,10 +41,23 @@ fi
 program=$(basename "$1")
 test_folder="$2"
 
+# Check there are tests
+testfiles="$test_folder/testfile*.txt"
+if ! compgen -G $testfiles > /dev/null;
+then
+    echo "Error: no es troben proves a aquesta carpeta"
+    exit 1
+fi
+
+# run pre-tests if any
+pretest="$test_folder/pretest"
+if [ -f $pretest ];
+then
+    bash "$pretest"
+fi
 
 # script options
 diffoptions=${INTROPRG_DIFFOPTIONS:-"-EZbB"}
-
 
 # temporary destinations
 tmpfolder=$(mktemp -d -t ies_$program"_XXXXXXXXXXX")
@@ -124,7 +140,6 @@ function display_stdout_difference() {
     echo
     echo "La diferència entre l'esperat i el trobat és:"
     show_contents "$difference"
-
 }
 
 
@@ -161,7 +176,7 @@ function display_output_difference() {
 # Display current text context
 function display_test_context() {
     testid=$1
-    testoin=$2
+    testioin=$2
     params=$3
     filesinprefix=4
 
@@ -175,14 +190,13 @@ function display_test_context() {
     echo
     echo $ java $program $params
     echo
-    if [ -s "$testoin" ]; 
+    if [ -s "$testioin" ]; 
     then
         echo "Entrada estàndard"
         echo "-----------------"
         echo
         echo "Se li ha passat el següent contingut per entrada estàndard:"
-        cat "$testoin"
-        echo
+        show_contents "$testioin"
     fi
     if compgen -G "$filesin"* > /dev/null;
     then
@@ -226,11 +240,14 @@ do
     filesoutprefix=fileout$testnumber"_"
     fileargin="$test_folder/argsin$testnumber.txt"
 
+
     # remove preexisting output files if any
     rm_fileout "$test_folder/$filesoutprefix"
 
+
     # copy input test files if any
     cp_filein "$test_folder/$filesinprefix" "$tmpfolder"
+
 
     # get command line arguments if any
     if [ -f "$fileargin" ];
@@ -243,7 +260,7 @@ do
     exit_code=$?
     if [ $exit_code -ne 0 ];
     then
-        display_test_context $testnumber $testioin "$params" "$filesinprefix"
+        display_test_context $testnumber "$testin" "$params" "$filesinprefix"
         echo
         echo "El resultat de l'execució ha estat:"
         show_contents "$tmpfile"
@@ -259,7 +276,7 @@ do
         # Display the difference
         if [ $exit_code -ne 0 ];
         then
-            display_test_context $testnumber $testioin "$params" "$filesinprefix"
+            display_test_context $testnumber "$testin" "$params" "$filesinprefix"
             display_stdout_difference "$testioout" "$tmpfile" "$tmpdiff"
         fi
     fi
