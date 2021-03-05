@@ -665,10 +665,10 @@ public class TestExercise {
         assertTrue(foundTarget, "No es troba el mòdul " + modulObjectiu + "(). Revisa enunciat.");
     }
     @Test
-    @DisplayName("Test hi és mòdul creaPuzleBuit()")
-    public void prgtestX8creaPuzleBuit() {
+    @DisplayName("Test hi és mòdul creaTaulellBuit()")
+    public void prgtestX8creaTaulellBuit() {
         Class classe = Escacs.class;
-        String modulObjectiu = "creaPuzleBuit";
+        String modulObjectiu = "creaTaulellBuit";
         Method[] methods = classe.getDeclaredMethods();
         boolean foundTarget = false;
         for (Method method: methods) {

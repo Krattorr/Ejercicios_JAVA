@@ -6,6 +6,5 @@ add «nom» «figura» «fila» «columna»
 del «nom» «fila» «columna»
 mv »nom» «fila0» «columna0» «fila1» «columna1»
 new «nom»
-rm «nom»
 quit
 puzle> adèu
