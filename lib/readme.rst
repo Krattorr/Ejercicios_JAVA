@@ -2,7 +2,7 @@ Aquesta carpeta inclou utilitats i fitxers de configuració pel suport als
 exercicis del mòdul de programació.
 
 Cal tenir present que els continguts poden ser modificats de manera
-automàtica en qualsevol moment. Per aquesta raó no és gaire convenient que
+automàtica en qualsevol moment. Per aquesta raó no és convenient que
 siguin modificats.
 
 Tot plegat està dissenyat i provat per funcionar en alguna distribució
