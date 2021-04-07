@@ -3,6 +3,7 @@
 # Considera:
 #   $1 el nom del programa que conté el main(): ignorat aquí
 #   $2 la carpeta amb els tests
+#   #3 isredirected: el guió té redirigida la sortida
 
 if [ -z "$1" ] || [ -z "$2" ];
 then
@@ -11,6 +12,7 @@ then
 fi
 test_folder="$2"
 test_program=TestExercise
+isredirected="$3"
 
 if [ ! -f "$test_folder/$test_program.java" ];
 then
@@ -31,6 +33,10 @@ then
 else
     # Executa els tests
     junitoptions="--disable-banner --fail-if-no-tests"
+    if [ $isredirected -eq 1 ];
+    then
+        junitoptions="$junitoptions --disable-ansi-colors"
+    fi
     java -cp $prgpath org.junit.platform.console.ConsoleLauncher -c $test_program $junitoptions &>"$tmpfile"
     exitcode=$?
     if [ $exitcode -ne 0 ];

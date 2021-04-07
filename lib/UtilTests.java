@@ -66,10 +66,8 @@ public class UtilTests {
      * @return the result
      */
     static boolean classHasPrivateField(Class<?> classInstance, String name) {
-        System.out.println("XXX trying private");
         Field[] fields = classInstance.getDeclaredFields();
         for (Field field: fields) {
-            System.out.println("Trying field " + field);
             if (field.getName().equals(name)) {
                 return Modifier.isPrivate(field.getModifiers());
             }

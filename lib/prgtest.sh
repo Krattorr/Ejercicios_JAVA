@@ -96,6 +96,12 @@ then
     exit 1
 fi
 
+if [ -t 1 ];
+then
+    isredirected=0
+else
+    isredirected=1
+fi
 error=0
 for test in $test_folder/test_*;
 do
@@ -106,7 +112,7 @@ do
     echo $title
     echo $title | tr [:print:] '='
     echo
-    bash "$test_script" "$exercise_base/$programa" "$test_folder"
+    bash "$test_script" "$exercise_base/$programa" "$test_folder" $isredirected
     if [ $? -ne 0 ];
     then
         error=1
