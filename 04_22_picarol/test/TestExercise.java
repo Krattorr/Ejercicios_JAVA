@@ -36,13 +36,17 @@ public class TestExercise {
     @DisplayName("test GatRenat accepta picarol")
     public void testRenatAcceptaPicarol() {
         GatRenat renat = new GatRenat();
-        Picarol picarol = new Picarol();
-        picarol.sona();
-        Picarol anticPicarol = renat.posaPicarol(picarol);
+        Picarol picarol1 = new Picarol();
+        Picarol picarol2 = new Picarol();
+        Picarol picarolExpectedNull = renat.posaPicarol(picarol1);
+        boolean tePicarol = renat.tePicarol();
+        Picarol picarolExpected1 = renat.posaPicarol(picarol2);
+        Picarol picarolExpected2 = renat.posaPicarol(null);
         assertAll(
-                () -> assertNull(anticPicarol, "quan no té picarol, posaPicarol() retorna null"),
-                () -> assertEquals(1, picarol.quantsCops(), "posaPicarol() ha de fer servir el picarol assignat"),
-                () -> assertTrue(renat.tePicarol(), "tePicarol() ha de ser true quan se li assigna un picarol")
+                () -> assertNull(picarolExpectedNull, "quan no té picarol, posaPicarol() retorna null"),
+                () -> assertEquals(picarolExpected1, picarol1, "posaPicarol() ha de fer servir el picarol assignat"),
+                () -> assertTrue(tePicarol, "tePicarol() ha de ser true quan se li assigna un picarol"),
+                () -> assertEquals(picarolExpected2, picarol2, "posaPicarol() ha de quedar-se el picarol que li passen")
                 );
     }
 
