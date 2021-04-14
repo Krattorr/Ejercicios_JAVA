@@ -18,14 +18,14 @@ public class GatRenat {
     }
     
     
-     public void setPosicio(String novaPosicio){
+     public void setPosicio(String posicio){
      
-   	 if (!novaPosicio.equals("dret")){
-   	 posicio="estirat";
+   	 if (!posicio.equals("dret")){
+   	 this.posicio="estirat";
    	
    	 }
    	 else{
-   	 posicio=novaPosicio;
+   	 this.posicio=posicio;
    	 }
    	 
    	
