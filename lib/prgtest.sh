@@ -15,57 +15,51 @@ script_base=$(dirname "$0")
 # Check pwd is in a exercise folder
 exercise_base=$PWD
 
-if [ -z "$INTROPRG_JAVAPOLICYFILE" ];
-then
-    test_folders="test mytests"
-else
-    test_folders="test"
-fi
-
-has_test=0
-test_subfolder=test
+test_subfolder="test"
 
 test_folder="$exercise_base/$test_subfolder"
 if [ ! -d "$test_folder" ];
 then
     echo
-    echo "Error"
-    echo "====="
+    echo "Problema"
+    echo "========"
     echo
     echo "La carpeta actual no sembla correspondre a un exercici amb correcció automàtica"
+    echo
     exit 1
 fi
-has_test=1
 
 # Check whether cwd is an actual exercise folder
-if [ ! -d  test ];
+if [ ! -d "$test_subfolder" ];
 then
     echo
-    echo "Error"
-    echo "====="
+    echo "Problema"
+    echo "========"
     echo
     echo "La carpeta actual no sembla correspondre a un exercici de introprg amb suport de prova automàtica."
+    echo
     exit 1
 fi
-
 
 # Check test configuration
 if [ ! -f "$test_folder/programname" ];
 then
     echo
-    echo "Error"
-    echo "====="
+    echo "Problema"
+    echo "========"
     echo
     echo "Problemes amb el test $test_folder. Si l'has modificat, considera recuperar l'original"
+    echo
     exit 1
 fi
 
+# Check target program exists
 programname=$(cat "$test_folder"/programname)
 if [ ! -f "$programname" ];
 then
     echo
-    echo "Error"
-    echo "====="
+    echo "Problema"
+    echo "========"
     echo
     echo "No es troba el programa $programname"
     echo "Assegura't que has posat el nom correcte al teu programa"
@@ -73,35 +67,64 @@ then
     exit 1
 fi
 
+# Check every java file in this folder is already commited
+if [ -z "$INTROPRG_JAVAPOLICYFILE" ];
+then
+    if git status | grep '\.java' | grep -v '\/'  &> /dev/null;
+    then
+        echo
+        echo "Problema"
+        echo "========"
+        echo
+        echo "Cal fer commit dels canvis al codi a aquesta carpeta abans de continuar"
+        echo
+        exit 1
+    fi
+fi
+
 programa=${programname%%.*}
 if [ ! -f "$programa.class" ];
 then
+    echo
+    echo "Problema"
+    echo "========"
+    echo
     echo "Comprova si has compilat $programa.java"
+    echo
     exit 1
 fi
 
 if [ "$programa.java" -nt "$programa.class" ];
 then
+    echo
+    echo "Problema"
+    echo "========"
+    echo
     echo "Comprova si has recompilat $programa.java després de modificar-lo"
+    echo
     exit 1
 fi
 
 if ! ls $test_folder/test_* &> /dev/null;
 then
     echo
-    echo "Error"
-    echo "====="
+    echo "Problema"
+    echo "========"
     echo
     echo "Aquesta carpeta no sembla contenir tests"
+    echo
     exit 1
 fi
 
+# Check for redirection
 if [ -t 1 ];
 then
     isredirected=0
 else
     isredirected=1
 fi
+
+# Do the testing
 error=0
 for test in $test_folder/test_*;
 do
