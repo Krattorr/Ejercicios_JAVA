@@ -107,8 +107,9 @@ public class TestExercise {
         @DisplayName("test Gat s'aixeca")
         public void testGatEstiratADret() {
             Gat gat = new Gat(null);
+            String resultat = gat.aixecat();
             assertAll("aixecat",
-                    () -> assertEquals("m'aixeco", gat.aixecat(), "revisa el missatge de retorn quan se li demana aixecar-se"),
+                    () -> assertEquals("m'aixeco", resultat, "revisa el missatge de retorn quan se li demana aixecar-se"),
                     () -> assertTrue(gat.estaDret(), "hauria de quedar dret quan se li demana que s'aixequi")
                     );
         }
@@ -117,9 +118,10 @@ public class TestExercise {
         @DisplayName("test Gat seu")
         public void testGatEstiratAAssegut() {
             Gat gat = new Gat(null);
+            String resultat = gat.seu();
             assertAll("seu",
-                    () -> assertEquals("m'assec", gat.seu(), "revisa el missatge de retorn quan se li demana seure's"),
-                    () -> assertTrue(gat.estaAssegut(), "hauria de quedar dret quan se li demana que segui")
+                    () -> assertEquals("m'assec", resultat, "revisa el missatge de retorn quan se li demana seure's"),
+                    () -> assertTrue(gat.estaAssegut(), "hauria de quedar assegut quan se li demana que segui")
                     );
         }
 
@@ -128,9 +130,10 @@ public class TestExercise {
         public void testGatDretAEstirat() {
             Gat gat = new Gat(null);
             gat.setPosicio("dret");
+            String resultat = gat.estirat();
             assertAll("estirat",
-                    () -> assertEquals("m'estiro", gat.estirat(), "revisa el missatge de retorn quan se li demana estirar-se"),
-                    () -> assertTrue(gat.estaEstirat(), "hauria de quedar dret quan se li demana que s'estiri")
+                    () -> assertEquals("m'estiro", resultat, "revisa el missatge de retorn quan se li demana estirar-se"),
+                    () -> assertTrue(gat.estaEstirat(), "hauria de quedar estirat quan se li demana que s'estiri")
                     );
         }
 
@@ -138,8 +141,9 @@ public class TestExercise {
         @DisplayName("test Gat no fa res quan ja està estirat i li demanen que s'estiri")
         public void testGatEstiratAEstirat() {
             Gat gat = new Gat(null);
+            String resultat = gat.estirat();
             assertAll("reestirat",
-                    () -> assertEquals("no faig res", gat.estirat(), "revisa el missatge de retorn quan no canvia de posició"),
+                    () -> assertEquals("no faig res", resultat, "revisa el missatge de retorn quan no canvia de posició"),
                     () -> assertTrue(gat.estaEstirat(), "hauria de quedar estirat")
                     );
         }
@@ -149,8 +153,9 @@ public class TestExercise {
         public void testGatDretADret() {
             Gat gat = new Gat(null);
             gat.setPosicio("dret");
+            String resultat = gat.aixecat();
             assertAll("reaixecat",
-                    () -> assertEquals("no faig res", gat.aixecat(), "revisa el missatge de retorn quan no canvia de posició"),
+                    () -> assertEquals("no faig res", resultat, "revisa el missatge de retorn quan no canvia de posició"),
                     () -> assertTrue(gat.estaDret(), "hauria de quedar dret")
                     );
         }

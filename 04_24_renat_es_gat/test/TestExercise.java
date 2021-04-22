@@ -109,8 +109,9 @@ public class TestExercise {
         @DisplayName("test Renat s'aixeca")
         public void testRenatEstiratADret() {
             GatRenat renat = new GatRenat();
+            String resultat = renat.aixecat();
             assertAll("aixecat",
-                    () -> assertEquals("m'aixeco", renat.aixecat(), "revisa el missatge de retorn quan se li demana aixecar-se"),
+                    () -> assertEquals("m'aixeco", resultat, "revisa el missatge de retorn quan se li demana aixecar-se"),
                     () -> assertTrue(renat.estaDret(), "hauria de quedar dret quan se li demana que s'aixequi")
                     );
         }
@@ -119,9 +120,10 @@ public class TestExercise {
         @DisplayName("test Renat seu")
         public void testRenatEstiratAAssegut() {
             GatRenat renat = new GatRenat();
+            String resultat = renat.seu();
             assertAll("seu",
-                    () -> assertEquals("m'assec", renat.seu(), "revisa el missatge de retorn quan se li demana seure's"),
-                    () -> assertTrue(renat.estaAssegut(), "hauria de quedar dret quan se li demana que segui")
+                    () -> assertEquals("m'assec", resultat, "revisa el missatge de retorn quan se li demana seure's"),
+                    () -> assertTrue(renat.estaAssegut(), "hauria de quedar assegut quan se li demana que segui")
                     );
         }
 
@@ -130,9 +132,10 @@ public class TestExercise {
         public void testRenatDretAEstirat() {
             GatRenat renat = new GatRenat();
             renat.setPosicio("dret");
+            String resultat = renat.estirat();
             assertAll("estirat",
-                    () -> assertEquals("m'estiro", renat.estirat(), "revisa el missatge de retorn quan se li demana estirar-se"),
-                    () -> assertTrue(renat.estaEstirat(), "hauria de quedar dret quan se li demana que s'estiri")
+                    () -> assertEquals("m'estiro", resultat, "revisa el missatge de retorn quan se li demana estirar-se"),
+                    () -> assertTrue(renat.estaEstirat(), "hauria de quedar estirat quan se li demana que s'estiri")
                     );
         }
 
@@ -140,8 +143,9 @@ public class TestExercise {
         @DisplayName("test Renat no fa res quan ja està estirat i li demanen que s'estiri")
         public void testRenatEstiratAEstirat() {
             GatRenat renat = new GatRenat();
+            String resultat = renat.estirat();
             assertAll("reestirat",
-                    () -> assertEquals("no faig res", renat.estirat(), "revisa el missatge de retorn quan no canvia de posició"),
+                    () -> assertEquals("no faig res", resultat, "revisa el missatge de retorn quan no canvia de posició"),
                     () -> assertTrue(renat.estaEstirat(), "hauria de quedar estirat")
                     );
         }
@@ -151,8 +155,9 @@ public class TestExercise {
         public void testRenatDretADret() {
             GatRenat renat = new GatRenat();
             renat.setPosicio("dret");
+            String resultat = renat.aixecat();
             assertAll("reaixecat",
-                    () -> assertEquals("no faig res", renat.aixecat(), "revisa el missatge de retorn quan no canvia de posició"),
+                    () -> assertEquals("no faig res", resultat, "revisa el missatge de retorn quan no canvia de posició"),
                     () -> assertTrue(renat.estaDret(), "hauria de quedar dret")
                     );
         }
@@ -163,8 +168,9 @@ public class TestExercise {
         public void testRenatAssegutAAssegut() {
             GatRenat renat = new GatRenat();
             renat.setPosicio("assegut");
+            String resultat = renat.seu();
             assertAll("reseu",
-                    () -> assertEquals("no faig res", renat.seu(), "revisa el missatge de retorn quan no canvia de posició"),
+                    () -> assertEquals("no faig res", resultat, "revisa el missatge de retorn quan no canvia de posició"),
                     () -> assertTrue(renat.estaAssegut(), "hauria de quedar assegut")
                     );
         }
