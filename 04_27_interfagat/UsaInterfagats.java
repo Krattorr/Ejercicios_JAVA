@@ -2,7 +2,7 @@
  * Aquest programa serveix de comprovació de que es disposa de tots els
  * requeriments bàsics de l'exercici del Gat Renat amb Interfaces
  */
-public class InterfaGats {
+public class UsaInterfagats {
     public static void main(String[] args) {
         GatRenat renat = new GatRenat();
         Garfield garfield = new Garfield();
