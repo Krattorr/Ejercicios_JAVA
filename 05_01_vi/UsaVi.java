@@ -6,7 +6,7 @@ public class Vi{
 	 	
 	 	public Vi (String nom,int preu){
 	 		setPreu(preu);
-	 		String getNom(nom);
+	 		getNom(nom);
 	 	}
 	 	public Vi (String nom,int preu){
 	 		setPreu(preu);
@@ -32,20 +32,29 @@ public class Vi{
 	 	public void setEstoc(int estoc){
 	 	if(estoc<=-1){
 	 		nouestoc=0;
-	 		estoc=nouestoc
+	 		estoc=nouestoc;
 	 	}
 	 	if(estoc<=-1){
 	 		nouestoc=0;
-	 		estoc=nouestoc
+	 		estoc=nouestoc;
 	 	}
 	 	}
-   			 
+	 	public String normalitzaNom(String nom){
+	 	if (nom.equals("Roura blanc")){
+	 	return "Roura blanc";
+	 	}
+	 	else {
+	 	return "nom no vàlid";
+	 	}
+	 	}
 
 	@Override
 	public String toString() {
     		return String.format("%n\tVi: %s%n\tPreu: %d%n\tEstoc: %d%n",
                          nom, preu, estoc);
 		}
+		
+		
 }
 
 /*
