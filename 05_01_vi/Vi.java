@@ -37,8 +37,10 @@ public class Vi{
 	 	}
 	 	}
 	 	public static String normalitzaNom(String nounom){
-	 	return nounom.trim();
-	 	
+	 	if(nounom.isBlank() || nounom.isEmpty()){
+	 	return "nom no vàlid";
+	 	}
+	 	return nounom.trim().replaceAll("\\s+"," ");
 	 	}
 
 	@Override
