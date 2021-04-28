@@ -6,11 +6,11 @@ public class Vi{
 	 	
 	 	public Vi (String nom,int preu){
 	 		setPreu(preu);
-	 		normalitzaNom(nom);
+	 		this.nom=normalitzaNom(nom);
 	 	}
 	 	public Vi (String nom,int preu, int estoc){
 	 		setPreu(preu);
-	 		normalitzaNom(nom);
+	 		this.nom=normalitzaNom(nom);
 	 		setEstoc(estoc);
 	 	}
 	 	
@@ -37,12 +37,8 @@ public class Vi{
 	 	}
 	 	}
 	 	public String normalitzaNom(String nom){
-	 	if (nom.equals("Roura blanc")){
-	 	return "Roura blanc";
-	 	}
-	 	else {
-	 	return "nom no vàlid";
-	 	}
+	 	nom.trim();
+	 	return nom;
 	 	}
 
 	@Override
