@@ -28,11 +28,11 @@ public class Vi{
 	 	}
 	 	}
 	 	public void setEstoc(int nouestoc){
-	 	if(estoc<=-1){
+	 	if(nouestoc<=-1){
 	 		estoc=nouestoc;
 	 	}
-	 	if(estoc<=-1){
-	 		nouestoc=0;
+	 	if(nouestoc<=-1){
+	 		
 	 		estoc=nouestoc;
 	 	}
 	 	}
