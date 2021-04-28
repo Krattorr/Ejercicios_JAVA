@@ -6,11 +6,11 @@ public class Vi{
 	 	
 	 	public Vi (String nom,int preu){
 	 		setPreu(preu);
-	 		getNom(nom);
+	 		setNom(nom);
 	 	}
-	 	public Vi (String nom,int preu){
+	 	public Vi (String nom,int preu, int estoc){
 	 		setPreu(preu);
-	 		String getNom(nom);
+	 		setNom(nom);
 	 		setEstoc(estoc);
 	 	}
 	 	
@@ -20,7 +20,7 @@ public class Vi{
 	 	public int getPreu(){
    	 		return preu;
     			}
-    		public int getPreu(){
+    		public int getEstoc(){
    	 		return estoc;
     			}
     			
