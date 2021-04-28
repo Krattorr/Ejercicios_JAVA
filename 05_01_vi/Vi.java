@@ -36,9 +36,9 @@ public class Vi{
 	 		estoc=nouestoc;
 	 	}
 	 	}
-	 	public static String normalitzaNom(String nom){
-	 	nom.trim();
-	 	return nom;
+	 	public static String normalitzaNom(String nounom){
+	 	return nounom.trim();
+	 	
 	 	}
 
 	@Override
