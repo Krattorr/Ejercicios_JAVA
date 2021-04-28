@@ -31,7 +31,7 @@ public class Vi{
 	 	if(nouestoc<=-1){
 	 		estoc=nouestoc;
 	 	}
-	 	if(nouestoc<=-1){
+	 	if(nouestoc>=0){
 	 		
 	 		estoc=nouestoc;
 	 	}
