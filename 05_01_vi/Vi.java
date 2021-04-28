@@ -1,3 +1,7 @@
+/*
+Primera version sr estrella esta es la versio de vi, falta botiga y entorn
+*/
+
 public class Vi{
 
 	 	private String nom;
