@@ -1,3 +1,4 @@
+
 /*
  * Aquesta classe fa una comprovació ràpida del funcionament de la classe
  * Vi
