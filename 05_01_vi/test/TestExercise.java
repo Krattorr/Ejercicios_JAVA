@@ -26,6 +26,39 @@ public class TestExercise {
             String obtingut = Vi.normalitzaNom(nom);
             assertEquals(esperat, obtingut, missatge);
         }
+
+        @Test
+        @DisplayName("test preu negatiu es queda en 0")
+        public void preuNegatiu() {
+            Vi vi = new Vi("nom vi", -1);
+            int preuTrobatEnConstruccio = vi.getPreu();
+            vi.setPreu(10);
+            int preuTrobatEnSetPositiu = vi.getPreu();
+            vi.setPreu(-10);
+            int preuTrobatEnSetNegatiu = vi.getPreu();
+            assertAll(
+                    () -> assertEquals(0, preuTrobatEnConstruccio, "El constructor de Vi ha de controlar preus negatius"),
+                    () -> assertEquals(10, preuTrobatEnSetPositiu, "Vi.setPreu() ha d'assignar preus correctes"),
+                    () -> assertEquals(10, preuTrobatEnSetNegatiu, "Vi.setPreu() ha d'ignorar preus incorrectes")
+                    );
+        }
+
+        @Test
+        @DisplayName("test estoc negatiu es queda en 0")
+        public void estocNegatiu() {
+            Vi vi = new Vi("nom vi", 10, -1);
+            int estocTrobatEnConstruccio = vi.getEstoc();
+            vi.setEstoc(10);
+            int estocTrobatEnSetPositiu = vi.getEstoc();
+            vi.setEstoc(-10);
+            int estocTrobatEnSetNegatiu = vi.getEstoc();
+            assertAll(
+                    () -> assertEquals(0, estocTrobatEnConstruccio, "El constructor de Vi ha de controlar estocs negatius"),
+                    () -> assertEquals(10, estocTrobatEnSetPositiu, "Vi.setEstoc() ha d'assignar estocs correctes"),
+                    () -> assertEquals(10, estocTrobatEnSetNegatiu, "Vi.setEstoc() ha d'ignorar estocs incorrectes")
+                    );
+        }
+
     }
 
 }
