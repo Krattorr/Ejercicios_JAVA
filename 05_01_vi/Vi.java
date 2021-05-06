@@ -1,14 +1,5 @@
-<<<<<<< HEAD
+
 /* Sumaremos vidas y restaremos vidas a gatrenat */
-
-public class Vi{
-
-	 	private String vi;
-	 	
-	 	
-	 	
-   			 }
-=======
 /*
 Primera version sr estrella esta es la versio de vi, falta botiga y entorn
 */
@@ -27,6 +18,9 @@ public class Vi{
 	 		setPreu(preu);
 	 		this.nom=normalitzaNom(nom);
 	 		setEstoc(estoc);
+	 	}
+	 	public String getNom(){
+	 		return nom;
 	 	}
 	 	
 	 	
@@ -66,4 +60,4 @@ public class Vi{
 		
 		
 }
->>>>>>> 887c41efaec8e4ae429e64085f6f97308a36b595
+
