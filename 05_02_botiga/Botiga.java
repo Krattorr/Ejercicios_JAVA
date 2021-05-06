@@ -17,9 +17,8 @@ public class Botiga{
 	}
 	
 	public Vi afegeix(Vi vino){
-		String norma=vino.getNom();
-		norma.substring(0,1).toUpperCase();
-		if (cerca(norma)==null){
+		
+		if (cerca(vino.getNom())==null){
 			for(int i=0;i<vins.length-1;i++){
 				if(vins[i]==null){
 					vins[i]=vino;
@@ -47,6 +46,9 @@ public class Botiga{
 		}
 	
 	public Vi cerca(String nomVi){
+		
+		nomVi.substring(0,1).toUpperCase();
+		
 		for(int i=0;i<vins.length-1;i++){
 			if(vins[i]!=null){
 				if(vins[i].getNom().equals(nomVi)){
