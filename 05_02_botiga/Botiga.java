@@ -1,53 +1,59 @@
 
+
+
+
 public class Botiga{
+	 private int DEFAULT_MAX_VINS=100;
+	private Vi[] vins;
 	
 	
 	public Botiga(int maxVins){
-	maxVins=DEFAULT_MAX_VINS; 
+	this.vins=new Vi[maxVins];
 	
 	}
 	
 	public Botiga(){
+	this.vins=new Vi[DEFAULT_MAX_VINS];
 	}
 	
-	public int afegeix(int Vi){
-	for(int i=1;i>Vi.length;i++){
-		if(Vi== i){
+	public Vi afegeix(Vi vino){
+		if (cerca(vino.getNom())==null){
+			for(int i=0;i<vins.length-1;i++){
+				if(vins[i]==null){
+					vins[i]=vino;
+					return vins[i];
+				}
+			}
+		
+		}
+	
 		return null;
-		}
-		else{
-		return i;
-		}
-	}
-	}
-	
-	public int elimina(int Vi){
-	for(int i=1;i>=Vi.length;i++){
-		if(Vi== i){
-		return null;
-		}
-		else{
-		return i;
-		}
-	}
-	}
-	
-	public int cerca(String nomVi){
-	for(int i=1;i>=Vi.length;i++){
-		if(Vi== i){
-		return null;
-		}
-		else{
-		return i;
-		}
-	}
-	
-	
 		
 	}
 	
+	public Vi elimina(Vi vino){
+		for(int i=0;i<vins.length-1;i++){
+			if(vins[i].equals(vino)){
+				if(vins[i].getEstoc()==0){
+					vins[i]=null;
+						return vino;
+					}
+			}
+			
+		}
+		return null;
+		}
 	
-	
+	public Vi cerca(String nomVi){
+		for(int i=0;i<vins.length-1;i++){
+			if(vins[i].getNom().equals(nomVi)){
+				return vins[i];
+			}
+			
+		
+		}
+		return null;
 	}
 	
 	
+}
