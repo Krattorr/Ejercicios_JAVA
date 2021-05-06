@@ -39,11 +39,11 @@ public class Vi{
 	 	
 	 	}
 	 	public void setEstoc(int nouestoc){
-	 	
 	 	if(nouestoc>=0){
-	 		
 	 		estoc=nouestoc;
 	 	}
+	 	
+	 	
 	 	}
 	 	public static String normalitzaNom(String nounom){
 	 	if(nounom.isBlank() || nounom.isEmpty()){
