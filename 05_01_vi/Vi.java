@@ -35,10 +35,14 @@ public class Vi{
 	 	if(preu>=0){
 	 		preu=preunou;
 	 	}
+	 	if(preu<=-1){
+	 		preu=0;
+	 	}
+	 	
 	 	}
 	 	public void setEstoc(int nouestoc){
 	 	if(nouestoc<=-1){
-	 		estoc=nouestoc;
+	 		estoc=0;
 	 	}
 	 	if(nouestoc>=0){
 	 		
