@@ -35,6 +35,9 @@ public class Vi{
 	 	if(preu>=0){
 	 		preu=preunou;
 	 	}
+	 	if (preu<=-1){
+	 		preu=10;
+	 	}
 	 	
 	 	
 	 	}
