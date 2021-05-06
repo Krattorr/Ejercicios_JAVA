@@ -10,6 +10,7 @@ public class Vi{
 	 	private int preu;
 	 	private int estoc;
 	 	
+	 	
 	 	public Vi (String nom,int preu){
 	 		setPreu(preu);
 	 		this.nom=normalitzaNom(nom);
@@ -32,11 +33,11 @@ public class Vi{
     			}
     			
 	 	public void setPreu(int preunou){
-	 	if(preu>=0){
+	 	if(preunou>=0){
 	 		preu=preunou;
 	 	}
-	 	if (preu<=-1){
-	 		preu=10;
+	 	if (preunou<=-1){
+	 		preunou=10;
 	 	}
 	 	
 	 	
