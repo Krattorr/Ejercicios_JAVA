@@ -22,13 +22,16 @@ public class Botiga{
 			for(int i=0;i<vins.length-1;i++){
 				if(vins[i]==null){
 					vins[i]=vino;
+					System.out.println("metio");
 					return vino;
+					
 				}
 			}
 		
 		}
 	
 		return null;
+		
 		
 	}
 	
