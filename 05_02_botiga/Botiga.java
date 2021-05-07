@@ -17,7 +17,7 @@ public class Botiga{
 	}
 	
 	public Vi afegeix(Vi vino){
-																																																																																																																												
+			    					                                     				         						System.out.print("LENGTH"+vins.length);																																																																																																											
 			for(int i=0;i<vins.length-1;i++){
 				if(vins[i]!=null){
 					
@@ -32,8 +32,9 @@ public class Botiga{
 			
 			for(int i=0;i<vins.length-1;i++){
 
-				vins[i + 1] = vino;
-			 	
+				if (vins[i] == null) {
+					System.out.println(i+"ES NULO");
+				}	 	
 			}
 		
 		System.out.println("Null al final afefeix");
