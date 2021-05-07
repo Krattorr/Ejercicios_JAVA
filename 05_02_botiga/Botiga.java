@@ -31,7 +31,7 @@ public class Botiga{
 			}
 			
 			for(int i=0;i<vins.length-1;i++){
-				 if (this.vins[i] == null) {
+				 if (this.vins[i] != null) {
 				 	this.vins[i] = vino;	
 				 }
 			}
