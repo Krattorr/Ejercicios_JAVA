@@ -18,7 +18,15 @@ public class Botiga{
 	
 	public Vi afegeix(Vi vino){
 		System.out.println(vino+"afegeix");
-		if (cerca(vino.getNom())==null){
+			for(int i=0;i<vins.length-1;i++){
+				if(vins[i]!=null){
+					if(vins[i].getNom().equals(vino.getNom())){
+						return null;
+					}
+				
+				}
+				
+			}
 			for(int i=0;i<vins.length-1;i++){
 				if(vins[i]==null){
 					vins[i]=vino;
@@ -26,12 +34,12 @@ public class Botiga{
 					return vino;
 					
 				}
-			}
+			
 		
 		}
-	
-		return null;
 		
+	
+		return null;	
 		
 	}
 	
