@@ -42,7 +42,7 @@ public class Botiga{
 		
 		}
 		
-	
+		System.out.println("Null al final afefeix");
 		return null;	
 		
 	}
