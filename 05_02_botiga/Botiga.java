@@ -34,6 +34,7 @@ public class Botiga{
 
 				if (vins[i] == null) {
 					System.out.println(i+"ES NULO");
+					vins[i] = vino;
 				}	 	
 			}
 		
