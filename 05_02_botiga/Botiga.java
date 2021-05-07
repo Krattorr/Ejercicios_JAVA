@@ -52,6 +52,7 @@ public class Botiga{
 		
 		for(int i=0;i<vins.length-1;i++){
 			if(vins[i]!=null){
+				System.out.println("villa");
 				if(vins[i].getNom().equals(nomVi)){
 					System.out.println("dale gaucho");
 					return vins[i];
