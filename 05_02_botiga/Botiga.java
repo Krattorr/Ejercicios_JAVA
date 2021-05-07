@@ -32,9 +32,8 @@ public class Botiga{
 			
 			for(int i=0;i<vins.length-1;i++){
 
-				if (vins[i] == null) {
-					System.out.println(i+"ES NULO");
-				}	 	
+				vins[i + 1] = vino;
+			 	
 			}
 		
 		System.out.println("Null al final afefeix");
