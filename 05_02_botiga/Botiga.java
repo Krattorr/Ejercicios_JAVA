@@ -19,11 +19,14 @@ public class Botiga{
 	public Vi afegeix(Vi vino){
 																																																																																																																												
 			for(int i=0;i<vins.length-1;i++){
+				if(vins[i]!=null){
 					
 					if(vins[i].getNom().equals(vino.getNom())){
+					       System.out.println("Devolvemos nulo");
 						return null;
 					}
 				
+				}
 				
 			}
 			for(int i=0;i<vins.length-1;i++){
