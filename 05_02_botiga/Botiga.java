@@ -29,12 +29,14 @@ public class Botiga{
 				
 			}
 			for(int i=0;i<vins.length-1;i++){
-				if(vins[i]==null){
-				        System.out.print("Añadido");
-					vins[i]=vino;
-					return vins[i];
-					
+				if (vins[i] != null){
+					continue;
 				}
+
+			        System.out.print("Añadido");
+				vins[i]=vino;
+				return vins[i];
+				 	
 			
 		
 		}
