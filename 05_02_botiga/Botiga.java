@@ -5,7 +5,7 @@
 public class Botiga{
 	 private int DEFAULT_MAX_VINS=100;
 	private Vi[] vins;
-	
+																																																																																																																																																																																																																																																																																																
 	
 	public Botiga(int maxVins){
 	this.vins=new Vi[maxVins];
@@ -17,9 +17,10 @@ public class Botiga{
 	}
 	
 	public Vi afegeix(Vi vino){
-
+																																																																																																																												
 			for(int i=0;i<vins.length-1;i++){
 				if(vins[i]!=null){
+					System.out.println(vins[i].getNom().equals(vino.getNom()));																																																																																																																																																																																																				
 					if(vins[i].getNom().equals(vino.getNom())){
 						return null;
 					}
@@ -30,7 +31,7 @@ public class Botiga{
 			for(int i=0;i<vins.length-1;i++){
 				if(vins[i]==null){
 					vins[i]=vino;
-					return vino;
+					return vins[i];
 					
 				}
 			
