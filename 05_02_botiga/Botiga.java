@@ -17,7 +17,7 @@ public class Botiga{
 	}
 	
 	public Vi afegeix(Vi vino){
-		System.out.println(vino+"afegeix");
+
 			for(int i=0;i<vins.length-1;i++){
 				if(vins[i]!=null){
 					if(vins[i].getNom().equals(vino.getNom())){
