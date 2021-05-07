@@ -8,12 +8,12 @@ public class Botiga{
 																																																																																																																																																																																																																																																																																																
 	
 	public Botiga(int maxVins){
-	this.vins=new Vi[maxVins];
+		this.vins=new Vi[maxVins];
 	
 	}
 	
 	public Botiga(){
-	this.vins=new Vi[DEFAULT_MAX_VINS];
+		this.vins=new Vi[DEFAULT_MAX_VINS];
 	}
 	
 	public Vi afegeix(Vi vino){
@@ -31,14 +31,11 @@ public class Botiga{
 			}
 			
 			for(int i=0;i<vins.length-1;i++){
-
-				if (vins[i] == null) {
-					System.out.println(i+"ES NULO");
-					vins[i] = vino;
-				}	 	
+				 if (this.vins[i] == null) {
+				 	this.vins[i] = vino;	
+				 }
 			}
 		
-		System.out.println("Null al final afefeix");
 		return null;	
 		
 	}
