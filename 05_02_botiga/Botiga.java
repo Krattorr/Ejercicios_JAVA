@@ -45,7 +45,7 @@ public class Botiga{
     public Vi elimina(Vi vino){
         for(int i=0;i<vins.length;i++){
             if(vins[i].equals(vino)){
-                if(vins[i].getEstoc()==0){
+                if(vins[i].getEstoc()>0){
                     vins[i]=null;
                     return vino;
                 }
@@ -58,7 +58,7 @@ public class Botiga{
     public Vi cerca(String nomVi){
 
         for(int i=0;i<vins.length;i++){
-            if(vins[i]!=null && vins[i].getEstoc()>0){
+            if(vins[i]!=null){
 		     if(vins[i].getNom()==nomVi){
 		           return vins[i];
 		        }
