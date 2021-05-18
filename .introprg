@@ -21,10 +21,15 @@ export INTROPRGDIR="$(cd $(dirname $BASH_SOURCE); pwd)"
 # paths per utilitats
 PATH=$PATH:$INTROPRGDIR/lib
 
+# altres variables
+export INTROPRG_SQLITEURL=https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.34.0/sqlite-jdbc-3.34.0.jar
+DRIVERJAR=$(echo $INTROPRG_SQLITEURL | cut -d \/ -f 9)
+
 # paths per Java
 export CLASSPATH=${CLASSPATH:-.}
 CLASSPATH=$CLASSPATH:$INTROPRGDIR/lib
 CLASSPATH=$CLASSPATH:$INTROPRGDIR/lib/junit-platform-console-standalone.jar
+CLASSPATH=$CLASSPATH:$INTROPRGDIR/lib/$DRIVERJAR
 
 # opcions de comparació pels tests d'E/S per defecte
 INTROPRG_DIFFOPTIONS="-EZbB"

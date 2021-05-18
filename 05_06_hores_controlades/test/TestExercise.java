@@ -13,9 +13,9 @@ public class TestExercise {
         Random r = new Random();
         Hora hora = new Hora();
         String horaDefault = hora.toString();
-        boolean quanHoresNegatiu = hora.setHores(- (r.nextInt(5)));
-        boolean quanMinutsNegatiu = hora.setMinuts(- (r.nextInt(10)));
-        boolean quanSegonsNegatiu = hora.setSegons(- (r.nextInt(10)));
+        boolean quanHoresNegatiu = hora.setHores(- (r.nextInt(5) + 1));
+        boolean quanMinutsNegatiu = hora.setMinuts(- (r.nextInt(10) + 1));
+        boolean quanSegonsNegatiu = hora.setSegons(- (r.nextInt(10) + 1));
         boolean quanHoresMassa = hora.setHores(24);
         boolean quanMinutsMassa = hora.setMinuts(60);
         boolean quanSegonsMassa = hora.setSegons(60);
